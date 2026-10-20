@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JobOrbit helps job seekers discover and organize job opportunities.">
+
+    <title>JobOrbit | Discover Your Next Opportunity</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./js/data.js" defer></script>
+    <script src="./js/app.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="./" aria-label="JobOrbit home">JobOrbit</a>
+            <p class="header-tagline">Discover opportunities. Apply with confidence.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero" aria-labelledby="hero-title">
+            <h1 id="hero-title">Find your next opportunity</h1>
+            <p>Explore jobs that match your skills and career goals.</p>
+        </section>
+
+        <section class="job-search" aria-label="Search and filter jobs">
+                <h2>Find your perfect opportunity</h2>
+
+                <div class="search-controls">
+                    <div class="form-group">
+                        <label for="search-input">Search jobs</label>
+                        <input
+                            type="search"
+                            id="search-input"
+                            placeholder="Job title or company..."
+                            autocomplete="off"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location-filter">Location</label>
+                        <select id="location-filter">
+                            <option value="">All locations</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="employment-filter">Employment type</label>
+                        <select id="employment-filter">
+                            <option value="">All types</option>
+                            <option value="Internship">Internship</option>
+                            <option value="Full-time">Full-time</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sort-filter">Sort by</label>
+                        <select id="sort-filter">
+                            <option value="newest">Newest first</option>
+                            <option value="oldest">Oldest first</option>
+                            <option value="default">Default order</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="saved-filter">Saved jobs</label>
+                        <select id="saved-filter">
+                            <option value="all">All jobs</option>
+                            <option value="saved">Saved jobs only</option>
+                        </select>
+                    </div>
+
+                    <button type="button" id="reset-filters">Reset filters</button>
+                </div>
+            </section>
+
+        <section class="job-results" aria-label="Job listings">
+            <div class="results-header">
+                <h2>Latest opportunities</h2>
+                <p id="results-count" aria-live="polite">Loading jobs...</p>
+            </div>
+
+            <div id="job-list" class="job-list">
+                <!-- JavaScript will render job cards here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>JobOrbit — A frontend engineering portfolio project.</p>
+        </div>
+    </footer>
+</body>
+</html>
